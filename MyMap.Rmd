@@ -1,0 +1,26 @@
+---
+title: "My Map"
+author: "Cody Coleman"
+date: "9/20/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# My Map (September 20, 2019)
+
+```{r, MyMap}
+
+library(leaflet)
+
+hole <- c("<a href = 'https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole' >World's Deepest Hole </a>")
+
+my_map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat = 69.3910634357, lng = 30.6051975792, popup = hole)
+my_map
+```
+
+## This is the location of the World's Deepest Bored Hole. It's about 7.6 miles deep. 
